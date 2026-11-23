@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.courses-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.courses-grid > div {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.courses-grid > div:nth-child(2) {
+    background-color: #ffffff;
+    border: 2px solid #0066cc; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,102,204,0.15);
+}
+
+.courses-grid > div h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.courses-grid > div:nth-child(2) h3 {
+    color: #0066cc;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.courses-grid > div p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.courses-grid > div:nth-child(2) p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.courses-grid > div a {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.courses-grid > div:nth-child(2) a {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .courses-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

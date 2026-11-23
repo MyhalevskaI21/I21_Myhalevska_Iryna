@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #0066cc;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #666666;
+    --border-color: #e0e0e0;
+    --spacing: 20px;
+    --radius: 8px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 40px var(--spacing);
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+.courses-grid {
+    display: flex;
+    gap: var(--spacing);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.course-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    width: 280px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.course-card--popular {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 102, 204, 0.15);
+}
+
+.course-card__title {
+    color: var(--text-main);
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.course-card--popular .course-card__title {
+    color: var(--primary-color);
+}
+
+.course-card__desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.course-card__badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #004c99;
+}
+
+
+@media (max-width: 600px) {
+    .courses-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .course-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}

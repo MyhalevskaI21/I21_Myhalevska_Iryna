@@ -1,0 +1,131 @@
+:root {
+  --color-bg-page: #f4f6f9;
+  --color-bg-card: #ffffff;
+  --color-bg-popular: #eff6ff;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-text-main: #1f2937;
+  --color-text-heading: #111827;
+  --color-text-muted: #4b5563;
+  --border-default: 1px solid #d1d5db;
+  --border-popular: 2px solid #2563eb;
+  --border-header: 1px solid #e5e7eb;
+  --gap-grid: 24px;
+  --padding-card: 24px;
+  --radius-card: 10px;
+  --radius-btn: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--color-bg-card);
+  border-bottom: var(--border-header);
+}
+
+.header__title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-grid);
+}
+
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-bg-card);
+  border: var(--border-default);
+  border-radius: var(--radius-card);
+  padding: var(--padding-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+.course-card--popular {
+  border: var(--border-popular);
+  background-color: var(--color-bg-popular);
+}
+
+
+.course-card__badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-bg-card);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.course-card__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: var(--color-text-heading);
+}
+
+.course-card__description {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+
+.button {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--color-primary);
+  color: var(--color-bg-card);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: var(--radius-btn);
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header__title {
+    font-size: 24px;
+  }
+}
